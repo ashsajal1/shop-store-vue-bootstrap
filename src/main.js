@@ -14,6 +14,7 @@ import Cartview from './components/Cartview.vue';
 import Home from './pages/Home.vue'
 import Cart from './pages/Cart.vue'
 import Store from './pages/Store.vue'
+import NotFound from './pages/NotFound.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,6 +22,7 @@ const router = createRouter({
         { path: '/', component: Home },
         { path: '/cart', component: Cart },
         { path: '/store', component: Store },
+        { path: "/:pathMatch(.*)*", component: NotFound },
     ]
 });
 
